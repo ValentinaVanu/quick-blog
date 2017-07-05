@@ -1,6 +1,6 @@
 {
   "copy": "2017 My Company",
-  "company": "y Company",
+  "company": "My Company",
   "side": [
     {
       "title": "Info",
@@ -23,13 +23,13 @@
       "title": "Category",
       "item": [
         {
-          "link": "/scss",
+          "link": "/css",
           "label": "CSS"
         }
         ,{
           "link": "/html",
           "label": "HTML"
-        } 
+        }
       ]
     }
   ]

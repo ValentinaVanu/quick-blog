@@ -17,14 +17,18 @@ html
     if config.entry.css.inline
       link(rel="stylesheet", href=inlinePath, inline)
   body
-    //-This will generate an empty div with id="top"
-      used to navigate to it from the top link 
+    //- this will generate an empty div with id="top"
+        used to navigate to it from the top link
     #top
     block welcome
-    //- This will generate an empty div with the it="continue"
+    //- this will generate an empty div with id="continue"
       used to navigate to it from the continue button
     #continue
-    block content
+    .page-wrapper
+      .container
+        .content
+          block content
+        include ../_component/side/side
 //- add external css at the end of the HTML so it doesn't block any resource download
 if config.entry.css.external
   link(href="/style.css", rel="stylesheet")
