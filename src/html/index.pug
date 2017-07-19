@@ -5,6 +5,7 @@
   Note: we do not need to use the file extention ".pug" as it is optional to add it.
   Feel free tp use it if you consider it make more sense to you.
 extends ../_layout/main
+
 block config
   - const canonical = 'http://quick-blog.bitbee.uk/html'
   - const title = 'HTML5 introduction'
@@ -13,8 +14,8 @@ block config
 block welcome
   .welcome
     h1=title
-      p.lead=description
-      include ../_component/continue/continue
+    p.lead=description
+    include ../_component/continue/continue
 
 block content
   h2 Read more to find out how cool HTML really is
