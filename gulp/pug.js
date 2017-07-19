@@ -15,6 +15,7 @@ const pug = ({
   const dir = config.directory;
   const dataPath = path.join(dir.source, dir.data);
   const inlinePath = path.join(taskTarget, 'inline.css');
+  var reload;
 
   gulp.task('pug', () => {
     let data = getJsonData({dataPath}) || {};
