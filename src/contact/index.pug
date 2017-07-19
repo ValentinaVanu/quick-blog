@@ -7,13 +7,13 @@
 extends ../_layout/main
 
 block config
- -const canonical = 'http://quick-blog.bitbee.uk/contact'
- -const title = 'Contact Quick Blog'
- -const descripton = 'Contact me'
+ - const canonical = 'http://quick-blog.bitbee.uk/contact'
+ - const title = 'Contact Quick Blog'
+ - const description = 'Contact me'
 
- block welcome
+block welcome
   .welcome
-    h2=title
+    h1=title
     p.lead=description
     include ../_component/continue/continue
 block content
@@ -25,5 +25,5 @@ block content
       +link({
         link: 'https://www.instagram.com/VanuValentina/?hl=en',
         text: 'Instagram',
-        title: 'Click to go to Instagram'
+        title: 'Click to visit my Instagram'
       })
