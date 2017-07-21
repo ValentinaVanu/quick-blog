@@ -10,15 +10,15 @@ block welcome
 block content
   #continue
   each item in template.body
-    if ["h1","h2","h3","h4","h5","h6"].indexOf(item.type) !== -1
+    if ["h1", "h2", "h3", "h4", "h5", "h6"].indexOf(item.type) !== -1
       #{item.type} #{item.data}
-    if item.type === "paragraph-safe"
+    if item.type === "paragraph"
       each p in item.data
         p= p
     if item.type === "paragraph-safe"
       each p in item.data
         p!= p
-    if ["ol","ul"].indexOf(item.type) !== -1
+    if ["ol", "ul"].indexOf(item.type) !== -1
       #{item.type}
         each listItem in item.data
           li= listItem
@@ -30,8 +30,8 @@ block content
     if item.type === "hr"
       hr
     if item.type === "blockquote"
-     +blockquote({
-       body: item.data,
-       source: item.source,
-       link: item.link
-     })
+      +blockquote({
+        body: item.data,
+        source: item.source,
+        link: item.link
+      })
