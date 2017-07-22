@@ -16,7 +16,7 @@ block config
   - const title = 'Welcome to Quick Blog'
   //- Configure the description of the page, useful for SEO
       this will populate the meta description tag
-  - const description = 'Using super Quick Blog is easy and you can get 100/100 score on Google page speed insights'
+  - const description = 'Using super Quick Blog is easy and you can get 100/100 score on Google pagespeed insights'
 
 //- We use this welcome block which will span the entire screen width and height
     and push the rest of the content down. This will be styled by inline.css,
@@ -32,8 +32,23 @@ block welcome
     blow, in the block "content"
 block content
   h2 Firstly, let's write some content
+  
+  p The sources of Quick Blog can be found on GitHub at #[+link({href: 'https://github.com/marianzburlea/quick-blog', text: 'Quick Blog'})]
+  
+  //- make use of the blockquote mixin
+  +blockquote({
+    source: 'Marian Zburlea',
+    link: 'http://bitbee.uk',
+    body: ['You don\'t have to be good to start, you have to start to become good.']
+  })
 
-  p The sourcer of Quick Blog can be found on GitHub at #(+link({href: 'https://github.com/marianzburlea/quick-blog', text: 'Quick Blog'})]
+  //- make use of the image mixin
+  +image({
+    filename: 'november.jpg',
+    caption: 'Leaves fall down in November',
+    autopath: true
+  })
+
   //- Create a paragraph with a lead class
   p.lead Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
@@ -41,5 +56,4 @@ block content
   p
     //- and inside it a small tag
     small Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-    
-    include _component/action-top/action-top
+  include _component/action-top/action-top
